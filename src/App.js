@@ -21,9 +21,14 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <Title title={dayInfo.title}/>
-      <Photo photoUrl={dayInfo.hdurl}/>
-      <Info info={dayInfo.explanation}/>
+    {
+      dayInfo && 
+      <>
+        <Title title={dayInfo.title}/>
+        <Photo photoUrl={dayInfo.hdurl}/>
+        <Info info={dayInfo.explanation}/>
+      </>
+    }
     </div>
   );
 }
